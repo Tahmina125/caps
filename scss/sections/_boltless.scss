@@ -1,0 +1,102 @@
+@use '../components/variables' as *;
+@use '../components/mixins' as *;
+
+
+.boltege{
+  
+  .col-4{
+    position: relative;
+    height: 21rem;
+    text-align: center;
+
+    &:hover{
+
+        .buttons{
+          left: 0;
+          opacity: 1;
+
+          @include breakpoint-up(md){
+            margin-left: 3rem;
+          }
+
+          @include breakpoint-up(lg){
+            bottom: 9%;
+            margin-left: 0;
+          }
+        }
+
+        .boltage_text{
+          transform: translateY(-75%);
+        }
+        
+      }
+
+    .boltage_img{
+      width: 8rem;
+      height: 8rem;
+      margin: auto;
+    }
+
+    .boltage_text{
+      background: #fff;
+      position: absolute;
+      left: 0;
+      right: 0;
+      transition: all 0.5s ease-in-out;
+
+      @include breakpoint-up(lg){
+        bottom: 26%;
+      }
+
+      h3{
+        font-size: .8rem;
+        padding: 1rem 0;
+
+        @include breakpoint-up(lg){
+          font-size: .9rem;
+          padding: 1.5rem 0;
+        }
+      }
+
+      p{
+        color: $primary;
+      }
+    }
+
+    .buttons{
+      position: absolute;
+      max-width: 81%;
+      margin-left: 1rem;
+      left: -20%;
+      opacity: 0;
+      transition: all 0.8s ease-in-out;
+
+        @include breakpoint-up(lg){
+          margin: 0;
+          max-width: 100%;
+          left: -10%;
+        }
+
+      button{
+        width: 100%;
+        font-size: .7rem;
+        padding: 1rem;
+
+        @include breakpoint-up(lg){
+          font-size: $font-md;
+        }
+        
+
+        &:first-child{
+          margin: 2rem 0 .8rem;
+        }
+
+        &:last-child{
+          background: #fff;
+          color: #000;
+          border: 1px solid #D6D6D6;
+        }
+      }
+    }
+  }
+}

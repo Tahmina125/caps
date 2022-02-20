@@ -1,0 +1,180 @@
+@use '../components/mixins' as *;
+@use '../components/variables' as *;
+
+.showcase{
+
+  @include breakpoint-up(md){
+     padding: 2rem 0;
+  }
+
+ 
+
+  .row{
+    max-width: 55rem;
+    justify-content: flex-start;
+
+    @include breakpoint-down(sm){
+      padding: 1rem 0;
+    }
+
+    @include breakpoint-up(md){
+      justify-content: space-evenly;
+      margin: auto;
+      margin-bottom: 1rem;
+    }
+
+
+    .gift{
+     // padding-bottom: 1rem;
+
+      .gift_icon{
+
+        @include breakpoint-down(md){
+          padding: 0 1rem;
+        }
+        
+      }
+    }
+
+    .search_bar{
+      position: relative;
+    
+        @include breakpoint-up(md){
+          display: none;
+        }
+    
+      .search_btn{
+        position: absolute;
+        top: 14%;
+        left: 1.5%;
+      }
+    
+      input{
+        border: 1px solid #D6D6D6;
+        padding-left: 2rem;
+        width: 100%;
+        height: 2.8125rem;
+      }
+    }
+  }
+
+  h6{
+    font-size: $font-sm;
+  }
+
+  .tinny{
+    font-size: .6rem;
+
+    @include breakpoint-up(lg){
+      font-size: $font-xsm;
+    }
+  }
+
+  
+
+  .super,.imagine{
+    @include breakpoint-down(sm){
+      display: none;
+    }
+  }
+
+}
+
+// OWL CAROUSEL 
+#carousel{
+
+  .owl-carousel{
+    width: 100%;
+    height: 20rem;
+
+      @include breakpoint-up(lg){
+        height: 40rem;
+      }
+  }
+
+  .item{
+    width: 100%;
+    height: 20rem;
+    position: relative;
+    background-image: url("/image/Home/slider_Image.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+      @include breakpoint-up(lg){
+        height: 40rem;
+      }
+
+      @include breakpoint-down(lg){
+        display: none;
+      }
+  }
+
+  .slide_content{
+      text-align: center;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      padding: 0 20%;
+
+
+      .heading{
+        font-size: 1rem;
+        font-family: 'Roboto', sans-serif;
+
+        @include breakpoint-up(lg){
+          font-size: 2rem;
+        }
+      }
+      p{
+        display: none;
+
+        @include breakpoint-up(lg){
+          display: block;
+          padding: 2rem 0;
+        }
+      }
+    }
+
+    .owl-nav{
+      position: absolute;
+      top: 42%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+  
+      .owl-prev{
+        position: absolute;
+        left: 0;
+        display: block;
+        background: $primary;
+        width: 3rem;
+        height: 3rem;
+        color: #fff;
+        font-size: 2rem;
+      }
+  
+      .owl-next{
+        position: absolute;
+        right: 0;
+        display: block;
+        background: $primary;
+        width: 3rem;
+        height: 3rem;
+        color: #fff;
+        font-size: 2rem;
+      }
+  
+    }
+
+  } 
+
+
+// PRODUCT PAGE
+.row2{
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+

@@ -1,0 +1,98 @@
+@use '../components/mixins' as *;
+
+nav{
+  
+  .row{
+    height: 6rem;
+    align-items: center;
+
+    
+
+    .menu_icon{
+      width: 28px;
+      cursor: pointer;
+
+      @include breakpoint-up(md){
+        display: none;
+      }
+    }
+
+    .logo{
+      width: 6.625rem;
+      height: 2.8125rem;
+      
+
+      @include breakpoint-up(lg){
+        margin-right: 5.4rem;
+      }
+    }
+  }
+
+  .cart{
+    width: 2rem;
+    height: 2.2rem;
+    text-align: right;
+  }
+}
+.search_wrap{
+  display: none;
+  position: relative;
+
+    @include breakpoint-up(md){
+      display: block;
+      flex-basis: 70%;
+    }
+
+  .search_btn{
+    position: absolute;
+    top: 14%;
+    left: 1.5%;
+  }
+
+  input{
+    border: 1px solid #D6D6D6;
+    padding-left: 2rem;
+    width: 100%;
+    height: 2.8125rem;
+  }
+}
+
+
+::placeholder{
+  font-size: 0.875rem;
+}
+
+select{
+  display: none;
+
+  @include breakpoint-up(lg){
+    display: block;
+  }
+}
+
+.borders{
+  position: absolute;
+  top:6rem;
+  left: 0;
+  right: 0;
+
+  @include breakpoint-up(lg){
+    top: 5.5rem;
+  }
+}
+
+.borderBlue{
+  border: 1px solid blue;
+}
+.borderRed{
+  border: 1px solid red;
+}
+.borderBlack{
+  border: 1px solid black;;
+}
+.borderGreen{
+  border: 1px solid green;;
+}
+.borderYellow{
+  border: 1px solid yellow;;
+}

@@ -1,0 +1,27 @@
+@use '../components/variables' as *;
+@use '../components/mixins' as *;
+
+.what_say{
+  text-align: center;
+
+  button{
+    margin: 2rem 0;
+  }
+
+  #comments{
+    @include breakpoint-down(lg){
+      display: none;
+    }
+  }
+
+  .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+    background: $primary;
+  }
+
+  .owl-theme .owl-dots .owl-dot span {
+    background: #fff;
+    border: 1px solid #D6D6D6;
+  }
+}
+
+

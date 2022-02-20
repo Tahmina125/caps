@@ -1,0 +1,90 @@
+@use '../components/variables' as *;
+@use '../components/mixins' as *;
+
+.feature{
+  text-align: center;
+
+  .col-3{
+    position: relative;
+    height: 22rem;
+
+      &:hover{
+
+        .buttons{
+          left: 0;
+          bottom: 9%;
+          opacity: 1;
+
+          @include breakpoint-up(lg){
+            bottom: 0;
+          }
+        }
+
+        .feature_text{
+          transform: translateY(-98%);
+          
+          @include breakpoint-up(lg){
+            transform: translateY(-75%);
+          }
+        }
+      }
+
+    .feature_img{
+      width: 10rem;
+      height: 10rem;
+      margin: auto;
+    }
+
+    .feature_text{
+      background: #fff;
+      transition: all 0.5s ease-in-out;
+
+      h3{
+        font-size: .875rem;
+        padding: 1rem 0;
+
+        @include breakpoint-up(lg){
+          font-size: 1rem;
+          padding: 1.5rem 0;
+        }
+      }
+
+      p{
+        color: $primary;
+      }
+    }
+
+    .buttons{
+      position: absolute;
+      max-width: 75%;
+      margin-left: 3rem;
+      left: -20%;
+      bottom: 9%;
+      opacity: 0;
+      transition: all 0.9s ease-in-out;
+
+      @include breakpoint-up(md){
+        margin: 0;
+        max-width: 100%;
+        bottom: 0;
+        left: -10%;
+      }
+
+      button{
+        width: 100%;
+        font-size: $font-md;
+
+        &:first-child{
+          margin: 2rem 0 .8rem;
+        }
+
+        &:last-child{
+          background: #fff;
+          color: #000;
+          border: 1px solid #D6D6D6;
+        }
+      }
+    }
+    
+  }
+}

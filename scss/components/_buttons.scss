@@ -1,0 +1,24 @@
+@use '../components/mixins' as *;
+@use '../components/variables' as *;
+
+button{
+  outline: none;
+  border: none;
+  padding: .8rem 1.2rem;
+  cursor: pointer;
+  background-color: $primary;
+  color: #fff;
+  font-weight: bold;
+  font-size: .9rem;
+  transition: 0.5s ease-in-out;
+
+  @include breakpoint-up(lg){
+    padding:1rem 2.5rem ;
+    font-size: 1rem;
+  }
+  
+
+  &:hover{
+    background: #454545;
+  }
+}

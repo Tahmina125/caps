@@ -1,0 +1,65 @@
+
+
+#sidebar{
+  width: 100%;
+  padding-top:2rem ;
+  text-transform: uppercase;
+  font-weight: bold;
+
+  .sidebar {
+    transition: all .3s ease-in-out;
+    z-index: 100;
+  
+    #leftside-navigation {
+  
+        li {
+          position: relative;
+  
+          &.active {
+  
+            ul {
+              display: block;
+            }
+          }
+  
+          a {
+            display: block;
+            padding: 0.8rem 0;
+            font-size: 0.875rem;
+            transition: all 200ms ease-in;
+  
+            span {
+              display: inline-block;
+            }
+          }
+        }
+  
+      ul ul {
+  
+      margin-left: 1rem;
+      display: none;
+      
+        a {
+          font-size: 0.75rem;
+          font-weight: normal;
+        }
+      }
+
+      .pull-right{
+        position: absolute;
+        right: 24%;
+      }
+
+    }
+  }
+
+  hr{
+    color: #D8D8D8;
+    width: 6rem;
+    margin: 2rem 0;
+  }
+  
+}
+
+
+
